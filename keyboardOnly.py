@@ -28,10 +28,10 @@ def automate_task():
             keyboard.press(Key.enter)
             keyboard.release(Key.enter)
             print("Pressed Enter to load the URL")
-            time.sleep(5)  # Wait for 5 seconds for the page to load
+            time.sleep(10)  # Wait for 5 seconds for the page to load
             
             # Step 4: Press Tab 22 times
-            for _ in range(22):
+            for _ in range(21):
                 keyboard.press(Key.tab)
                 keyboard.release(Key.tab)
                 time.sleep(0.1)  # Short delay between tabs
@@ -39,7 +39,7 @@ def automate_task():
             
             # Step 5: Press the down arrow key twice
             for _ in range(2):
-                keyboard.press(Key.down)
+                keyboard.press(Key.down)        
                 keyboard.release(Key.down)
                 time.sleep(0.1)  # Short delay between presses
             print("Pressed Down Arrow 2 times")
@@ -58,11 +58,12 @@ def automate_task():
             print("Closed the tab with Ctrl+F4")
             
             # Small delay before the next loop iteration
-            time.sleep(5)  # Adjust as needed
+            time.sleep(2)  # Adjust as needed
             
         except KeyboardInterrupt:
             print("Script stopped by user.")
             break  # Exit the loop on manual interruption
 
 if __name__ == "__main__":
+    time.sleep(5)
     automate_task()

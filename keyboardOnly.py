@@ -32,7 +32,7 @@ def automate_task():
             keyboard.release(Key.enter)
             print("Pressed Enter to load the URL")
             time.sleep(wait)  # Wait for 5 seconds for the page to load
-            wait = random.randint(10, 20)
+            # wait = random.randint(10, 20)
             
             # Step 4: Press Tab 22 times
             for _ in range(21):

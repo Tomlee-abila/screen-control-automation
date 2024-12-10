@@ -1,6 +1,8 @@
 from pynput.mouse import Controller as MouseController, Button
 from pynput.keyboard import Controller as KeyboardController, Key
 import time
+import random
+
 
 # Initialize mouse and keyboard controllers
 mouse = MouseController()
@@ -30,6 +32,7 @@ def automate_task():
             keyboard.release(Key.enter)
             print("Pressed Enter to load the URL")
             time.sleep(wait)  # Wait for 5 seconds for the page to load
+            wait = random.randint(10, 20)
             
             # Step 4: Press Tab 22 times
             for _ in range(21):
@@ -45,7 +48,7 @@ def automate_task():
                 time.sleep(0.1)  # Short delay between presses
             print("Pressed Down Arrow 2 times")
             
-            # Step 6: Press Enter
+            # Step 6: Press Enterdelay
             keyboard.press(Key.enter)
             keyboard.release(Key.enter)
             print("Pressed Enter to confirm selection")

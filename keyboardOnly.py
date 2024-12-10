@@ -5,6 +5,7 @@ import time
 # Initialize mouse and keyboard controllers
 mouse = MouseController()
 keyboard = KeyboardController()
+wait = 10
 
 def automate_task():
     while True:  # Forever loop
@@ -28,7 +29,7 @@ def automate_task():
             keyboard.press(Key.enter)
             keyboard.release(Key.enter)
             print("Pressed Enter to load the URL")
-            time.sleep(10)  # Wait for 5 seconds for the page to load
+            time.sleep(wait)  # Wait for 5 seconds for the page to load
             
             # Step 4: Press Tab 22 times
             for _ in range(21):
